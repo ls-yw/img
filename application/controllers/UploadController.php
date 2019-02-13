@@ -11,6 +11,11 @@ class UploadController extends BasicController
     public function imgAction() {
         $project = self::get('project', 'string', '');
         $other   = self::get('other', 'string', '');
+        
+        if(!in_array($project, ['ypy', 'blog'])){
+            return $this->ajaxReturn(2, '错误项目');
+        }
+        
         try {
             $relativePath = $project.'/'.date('Ymd');
             $path = '/data/html/upload/'.$relativePath;
