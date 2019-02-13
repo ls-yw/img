@@ -1,0 +1,5 @@
+{
+    "require": {
+        "woodlsy/upload": "^0.1.1"
+    }
+}
