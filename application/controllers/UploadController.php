@@ -34,7 +34,7 @@ class UploadController extends BasicController
             $id = (new Files())->add($insertData);
             if(!$id)Log::write('img', '上传记录保存失败，data：'.json_encode($insertData, JSON_UNESCAPED_UNICODE));
             
-            return $this->ajaxReturn(0, '成功', $data);
+            return $this->ajaxReturn(0, '成功', null,$data);
         }catch (\Exception $e){
             Log::write('img', $e->getMessage());
             return $this->ajaxReturn(1, $e->getMessage());

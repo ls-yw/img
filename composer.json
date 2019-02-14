@@ -1,5 +1,11 @@
 {
     "require": {
-        "woodlsy/upload": "^0.1.1"
+        "woodlsy/upload": "*"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
     }
 }

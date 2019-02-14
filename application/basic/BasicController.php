@@ -19,7 +19,6 @@ class BasicController extends Controller
     {
         $returnMsg = ['code'=>$code, 'msg'=>$msg];
         if($data)$returnMsg['data'] 	= $data;
-        $data = $returnMsg;
         
         if($other && is_array($other)){
             foreach ($other as $key => $val){
@@ -31,7 +30,7 @@ class BasicController extends Controller
             case 'JSON' :
                 // 返回JSON数据格式到客户端 包含状态信息
                 header('Content-Type:application/json; charset=utf-8');
-                exit(json_encode($data,JSON_UNESCAPED_UNICODE) ); // php 5.11
+                exit(json_encode($returnMsg,JSON_UNESCAPED_UNICODE) ); // php 5.11
         }
     }
     
