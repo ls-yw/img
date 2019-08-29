@@ -42,5 +42,5 @@ try{
     $response->send();
 } catch (\Exception $e) {
     echo '系统错误，请联系管理员';
-    Log::write('system', $e->getMessage());
+    Log::write('system', $e->getMessage().'|'.$e->getFile().'|'.$e->getLine());
 }
