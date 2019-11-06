@@ -6,7 +6,7 @@ use Phalcon\DI;
 
 class BasicController extends Controller
 {
-    
+
     /**
      * Ajax方式返回数据到客户端
      * @access protected
