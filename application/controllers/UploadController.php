@@ -52,7 +52,7 @@ class UploadController extends BasicController
         $urlImg  = self::get('url', 'string', '');
 
         if(!in_array($project, ['ypy', 'blog', 'novel'])){
-            return $this->ajaxReturn(2, '错误项目');
+            return $this->ajaxReturn(2, '错误项目:'.$project);
         }
 
         try {
